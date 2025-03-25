@@ -1,0 +1,1 @@
+export { SignUpStud } from "./ui/SignUpStud"

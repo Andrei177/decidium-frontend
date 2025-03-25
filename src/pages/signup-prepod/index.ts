@@ -1,0 +1,1 @@
+export { SignUpPrepod } from "./ui/SignUpPrepod";
