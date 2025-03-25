@@ -7,5 +7,5 @@ interface IAuthStore{
 
 export const useAuthStore = create<IAuthStore>(set => ({
     email: "",
-    password: ""
+    password: "" // поменял чето 
 }))
