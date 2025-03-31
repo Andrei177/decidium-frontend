@@ -1,14 +1,16 @@
+import Input from "../ui/input/Input"
+
 const SignUpForm = () => {
     return (
         <form>
             <label htmlFor="email">Email</label>
-            <input type="email" name="email"/>
+            <Input type="email" name="email"/>
 
             <label htmlFor="password">Password</label>
-            <input type="text" name="password"/>
+            <Input type="text" name="password"/>
             
             <label htmlFor="fio">ФИО</label>
-            <input type="text" name="fio"/>
+            <Input type="text" name="fio"/>
         </form>
     )
 }
