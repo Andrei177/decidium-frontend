@@ -1,6 +1,6 @@
+import cn from "classnames"
 import { FC, InputHTMLAttributes } from "react"
 import s from "./Input.module.css"
-import cn from "classnames"
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement>{
     className?: string

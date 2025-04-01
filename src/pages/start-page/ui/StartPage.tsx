@@ -20,7 +20,7 @@ export const StartPage = () => {
                     <Link to={Routes.SIGNUP_STUD}>Регистрация студента</Link>
                 </Button>
                 <Button variant={Variants.white} className={s.btn}>
-                    <Link to={Routes.SIGNUP_STUD}>Регистрация преподавателя</Link>
+                    <Link to={Routes.SIGNUP_PREPOD}>Регистрация преподавателя</Link>
                 </Button>
             </div>
         </div>

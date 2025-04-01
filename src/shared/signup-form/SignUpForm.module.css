@@ -1,3 +1,6 @@
+*{
+  font-family: 'Inter', sans-serif;
+}
 .content {
   display: flex;
   justify-content: center;
@@ -7,6 +10,7 @@
 }
 
 .form {
+  overflow: hidden;
   background-color: white;
   padding: 40px;
   border-radius: 10px;
@@ -29,18 +33,7 @@ label {
   font-weight: 800;
   font-size: 20px;
   text-align: center;
-  margin-top: -10px;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  outline: none;
-  font-size: 14px;
+  margin-top: -30px;
 }
 
 input::placeholder {
@@ -48,10 +41,11 @@ input::placeholder {
 }
 
 .back {
+
   width: 10%;
   padding: 4px;
   margin-left: 327px;
-  margin-top: -73px;
+  margin-top: -53px;
   background-color: #3b5998;
   color: white;
   border: 110px;

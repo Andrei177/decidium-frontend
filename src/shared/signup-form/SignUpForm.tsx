@@ -4,16 +4,20 @@ import Button from "../ui/button/Button";
 import Input from "../ui/input/Input";
 import s from "./SignUpForm.module.css";
 
+interface ISignUpForm{
+   isStudent:boolean;
+}
 
 
 
-const SignUpForm = () => {
+
+const SignUpForm = ({isStudent}:ISignUpForm) => {
     const navigate = useNavigate();
 
     return (
         <div className = {s.content}> 
         <form className={s.form}>
-            <label className = {s.regStud}>Регистрация студента</label>
+            <label className = {s.regStud}>Регистрация &shy; {isStudent?"Студента":"Преподавателя"}</label>
         <button className = {s.back} onClick={ () => navigate("/")}> &#10006;</button>
             <label className = {s.mail} htmlFor="email">Email</label>
             <Input type="email" name="email" placeholder="Введите email..."/>
