@@ -38,7 +38,6 @@ input::placeholder {
 }
 
 .back {
-
   width: 10%;
   padding: 4px;
   margin-left: 327px;
@@ -61,7 +60,7 @@ input::placeholder {
   background-color: #3b5998;
   color: white;
   font-size: 16px;
-  font-weight: 540;
+  font-weight: 600;
 }
 
 .butSave:hover {

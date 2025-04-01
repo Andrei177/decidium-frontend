@@ -6,9 +6,6 @@ export const SignIn = () => {
 
             <label htmlFor="password">Password</label>
             <input type="text" name="password" />
-
-            <label htmlFor="fio">ФИО</label>
-            <input type="text" name="fio" />
         </form>
     )
 }

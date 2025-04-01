@@ -16,12 +16,16 @@ export const StartPage = () => {
                 </h2>
             </div>
             <div className={s.btns}>
-                <Button className={s.btn}>
-                    <Link to={Routes.SIGNUP_STUD}>Регистрация студента</Link>
-                </Button>
-                <Button variant={Variants.white} className={s.btn}>
-                    <Link to={Routes.SIGNUP_PREPOD}>Регистрация преподавателя</Link>
-                </Button>
+                <Link to={Routes.SIGNUP_STUD}>
+                    <Button className={s.btn}>
+                        Регистрация студента
+                    </Button>
+                </Link>
+                <Link to={Routes.SIGNUP_PREPOD}>
+                    <Button variant={Variants.white} className={s.btn}>
+                        Регистрация преподавателя
+                    </Button>
+                </Link>
             </div>
         </div>
     )
