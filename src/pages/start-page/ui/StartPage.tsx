@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import { Routes } from "../../../app/router/routes"
-import s from "./StartPage.module.css"
 import Button, { Variants } from "../../../shared/ui/button/Button"
+import s from "./StartPage.module.css"
+
 
 export const StartPage = () => {
     return (

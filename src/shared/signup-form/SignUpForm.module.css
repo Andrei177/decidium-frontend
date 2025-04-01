@@ -1,0 +1,94 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #faf9f9ee;
+}
+
+.form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+label {
+  color: black;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.regStud{
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+.back {
+  width: 10%;
+  padding: 4px;
+  margin-left: 327px;
+  margin-top: -73px;
+  background-color: #3b5998;
+  color: white;
+  border: 110px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back:hover {
+  background-color: #2d4373;
+}
+
+.butSave {
+  background-color: #3b5998;
+  color: white;
+  font-size: 16px;
+  font-weight: 540;
+}
+
+.butSave:hover {
+  background-color: #2d4373;
+}
+
+.havAcc {
+  width: 100%;
+  padding: 12px;
+  background: none;
+  color: gray;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.4s ease-in-out;
+}
+.havAcc:hover {
+  background-color: #2d4373;
+  color: white;
+}
