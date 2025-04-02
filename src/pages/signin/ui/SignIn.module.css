@@ -1,0 +1,63 @@
+.dd{
+    overflow: hidden;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.vxod{
+    padding-top: 35px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.password, .mail{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.signInn {
+    background-color: #3b5998;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.zabpass {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    color: gray;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.4s ease-in-out;
+  }
+  .zabpass:hover {
+    color: rgba(128, 128, 128, 0.329);
+  }
+
+  .passRec{
+    width: 100%;
+    padding: 12px;
+    background: none;
+    color: gray;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 100px;
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  .passRec:hover{
+    color: rgba(128, 128, 128, 0.329);
+  }  

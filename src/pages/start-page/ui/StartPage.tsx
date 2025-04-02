@@ -16,6 +16,11 @@ export const StartPage = () => {
                 </h2>
             </div>
             <div className={s.btns}>
+            <Link to={Routes.SIGNIN}>
+            <Button variant={Variants.white} className={s.btn}>
+                        Войти
+                    </Button>
+                </Link>
                 <Link to={Routes.SIGNUP_STUD}>
                     <Button className={s.btn}>
                         Регистрация студента

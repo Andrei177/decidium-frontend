@@ -1,10 +1,12 @@
 
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
+import { Routes } from "../../app/router/routes";
+import FormWrapper from "../form-wrapper/FormWrapper";
 import Button from "../ui/button/Button";
 import Input from "../ui/input/Input";
 import s from "./SignUpForm.module.css";
-import { FC } from "react";
-import { Routes } from "../../app/router/routes";
+
 
 interface ISignUpForm {
     isStudent: boolean;
@@ -14,7 +16,7 @@ const SignUpForm: FC<ISignUpForm> = ({ isStudent }) => {
     const navigate = useNavigate();
 
     return (
-        <div className={s.content}>
+        <FormWrapper>
             <form className={s.form}>
                 <label className={s.regStud}>Регистрация &shy; {isStudent ? "студента" : "преподавателя"}</label>
                 <button
@@ -44,7 +46,7 @@ const SignUpForm: FC<ISignUpForm> = ({ isStudent }) => {
                     Уже есть аккаунт?
                 </button>
             </form>
-        </div>
+        </FormWrapper>
     )
 }
 
