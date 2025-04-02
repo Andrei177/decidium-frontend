@@ -20,8 +20,14 @@ export const SignIn = () => {
                         e.preventDefault();
                     }}> Войти</Button>
                 
-                <button className={s.zabpass}>Забыли пароль?</button>
-                <button className={s.passRec}>Еще нет аккаунта?</button>
+                <button className={s.zabpass}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                    }}> Забыли пароль?</button>
+                <button className={s.passRec}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                    }}> Еще нет аккаунта?</button>
             </form>
 
 
