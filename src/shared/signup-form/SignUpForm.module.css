@@ -19,10 +19,7 @@
   text-align: center;
 }
 
-label {
-  color: black;
-  font-size: 17px;
-  font-weight: 600;
+.mail, .pass, .fio {
   text-align: left;
 }
 

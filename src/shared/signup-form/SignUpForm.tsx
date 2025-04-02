@@ -28,7 +28,7 @@ const SignUpForm: FC<ISignUpForm> = ({ isStudent }) => {
                 <label className={s.mail} htmlFor="email">Email</label>
                 <Input type="email" name="email" placeholder="Введите email..." />
 
-                <label className={s.pass} htmlFor="password">Password</label>
+                <label className={s.pass} htmlFor="password">Пароль</label>
                 <Input type="text" name="password" placeholder="Введите пароль..." />
 
                 <label className={s.fio} htmlFor="fio">Имя пользователя</label>
