@@ -4,6 +4,7 @@ import Button from "../ui/button/Button";
 import Input from "../ui/input/Input";
 import s from "./SignUpForm.module.css";
 
+
 interface ISignUpForm{
    isStudent:boolean;
 }
