@@ -4,6 +4,7 @@ import { StartPage } from "../../pages/start-page";
 import { SignIn } from "../../pages/signin";
 import { SignUpStud } from "../../pages/signup-stud";
 import { SignUpPrepod } from "../../pages/signup-prepod";
+import { Setting } from "../../pages/setting";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
         path: Routes.SIGNIN,
         element: <SignIn/>
+    },
+    {
+        path: Routes.SETTING,
+        element: <Setting/>
     },
     {
         path: "*",

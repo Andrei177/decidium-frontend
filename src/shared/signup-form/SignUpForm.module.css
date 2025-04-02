@@ -1,6 +1,3 @@
-*{
-  font-family: 'Inter', sans-serif;
-}
 .content {
   display: flex;
   justify-content: center;
@@ -22,10 +19,7 @@
   text-align: center;
 }
 
-label {
-  color: black;
-  font-size: 17px;
-  font-weight: 600;
+.mail, .pass, .fio {
   text-align: left;
 }
 
@@ -41,7 +35,6 @@ input::placeholder {
 }
 
 .back {
-
   width: 10%;
   padding: 4px;
   margin-left: 327px;
@@ -64,7 +57,7 @@ input::placeholder {
   background-color: #3b5998;
   color: white;
   font-size: 16px;
-  font-weight: 540;
+  font-weight: 600;
 }
 
 .butSave:hover {
