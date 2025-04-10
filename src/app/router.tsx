@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Routes } from "./routes";
-import { StartPage } from "../../pages/start-page";
-import { SignIn } from "../../pages/signin";
-import { SignUpStud } from "../../pages/signup-stud";
-import { SignUpPrepod } from "../../pages/signup-prepod";
-import { Setting } from "../../pages/setting";
+import { Routes } from "../shared/router/routes";
+import { StartPage } from "../pages/start-page";
+import { SignIn } from "../pages/signin";
+import { SignUpStud } from "../pages/signup-stud";
+import { SignUpPrepod } from "../pages/signup-prepod";
+import { Setting } from "../pages/setting";
 
 const router = createBrowserRouter([
     {

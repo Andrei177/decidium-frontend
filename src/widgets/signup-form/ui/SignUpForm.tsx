@@ -1,12 +1,11 @@
 
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { Routes } from "../../app/router/routes";
-import FormWrapper from "../form-wrapper/FormWrapper";
-import Button from "../ui/button/Button";
-import Input from "../ui/input/Input";
+import { Routes } from "../../../shared/router/routes";
+import FormWrapper from "../../../shared/ui/form-wrapper/FormWrapper";
+import Button from "../../../shared/ui/button/Button";
+import Input from "../../../shared/ui/input/Input";
 import s from "./SignUpForm.module.css";
-
 
 interface ISignUpForm {
     isStudent: boolean;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Routes } from "../../../app/router/routes"
+import { Routes } from "../../../shared/router/routes"
 import Button, { Variants } from "../../../shared/ui/button/Button"
 import s from "./StartPage.module.css"
 
