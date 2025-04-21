@@ -4,7 +4,6 @@ export enum Routes {
     SIGNUP_PREPOD = "/signup-prepod",
     SIGNIN = "/signin",
     SETTING = "/setting",
-    TESTING = '/testing',
     TASKS = '/tasks',
     NOTES = '/notes',
     COURSES = '/courses',

@@ -5,7 +5,6 @@ import { SignIn } from "../pages/signin";
 import { SignUpStud } from "../pages/signup-stud";
 import { SignUpPrepod } from "../pages/signup-prepod";
 import { Setting } from "../pages/setting";
-import { Testing } from "../pages/testing";
 import { Tasks } from "../pages/tasks/ui/Tasks";
 import { Courses } from "../pages/courses/ui/Courses";
 import { Profile } from "../pages/profile/ui/Profile";
@@ -32,10 +31,6 @@ const router = createBrowserRouter([
     {
         path: Routes.SETTING,
         element: <Setting/>
-    },
-    {
-        path: Routes.TESTING,
-        element: <Testing/>
     },
     {
         path: Routes.TASKS,

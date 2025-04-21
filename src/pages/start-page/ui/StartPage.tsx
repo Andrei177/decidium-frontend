@@ -16,11 +16,6 @@ export const StartPage = () => {
                 </h2>
             </div>
             <div className={s.btns}>
-                <Link to={Routes.TESTING}>
-                    <Button variant={Variants.white} className={s.btn}>
-                        Меню
-                    </Button>
-                </Link>
                 <Link to={Routes.SIGNIN}>
                     <Button variant={Variants.white} className={s.btn}>
                         Войти

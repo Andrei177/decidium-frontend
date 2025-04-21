@@ -11,7 +11,7 @@ interface ISignUpForm {
     isStudent: boolean;
 }
 
-const SignUpForm: FC<ISignUpForm> = ({ isStudent }) => {
+export const SignUpForm: FC<ISignUpForm> = ({ isStudent }) => {
     const navigate = useNavigate();
 
     return (
