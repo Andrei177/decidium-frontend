@@ -16,8 +16,8 @@ export const StartPage = () => {
                 </h2>
             </div>
             <div className={s.btns}>
-            <Link to={Routes.SIGNIN}>
-            <Button variant={Variants.white} className={s.btn}>
+                <Link to={Routes.SIGNIN}>
+                    <Button variant={Variants.white} className={s.btn}>
                         Войти
                     </Button>
                 </Link>
