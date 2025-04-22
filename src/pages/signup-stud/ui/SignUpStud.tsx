@@ -1,4 +1,4 @@
-import SignUpForm from "../../../widgets/signup-form/ui/SignUpForm"
+import { SignUpForm }from "../../../widgets/signup-form"
 
 export const SignUpStud = () => {
   return (

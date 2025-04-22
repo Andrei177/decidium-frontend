@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Routes } from "../shared/router/routes";
+import { Routes } from "../shared"
 import { StartPage } from "../pages/start-page";
 import { SignIn } from "../pages/signin";
 import { SignUpStud } from "../pages/signup-stud";
 import { SignUpPrepod } from "../pages/signup-prepod";
 import { Setting } from "../pages/setting";
-import { Tasks } from "../pages/tasks/ui/Tasks";
-import { Courses } from "../pages/courses/ui/Courses";
-import { Profile } from "../pages/profile/ui/Profile";
-import { Tape } from "../pages/tape/ui/Tape";
-import { Notes } from "../pages/notes/ui/Notes";
+import { Tasks } from "../pages/tasks";
+import { Courses } from "../pages/courses";
+import { Profile } from "../pages/profile";
+import { Tape } from "../pages/tape";
+import { Notes } from "../pages/notes";
 
 const router = createBrowserRouter([
     {

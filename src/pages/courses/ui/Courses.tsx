@@ -1,12 +1,12 @@
 import s from "./Courses.module.css"
-import { BottomNav } from "../../../widgets/bottom-nav/ui/BottomNav"
+import { BottomNav } from "../../../widgets/bottom-nav"
 
 
-export const  Courses = () => {
+export const Courses = () => {
     return (
         <div className={s.content}>
             <div className={s.titles}>
-            <h1 color='#FF00FF'>
+                <h1 color='#FF00FF'>
                     Курсы
                 </h1>
                 <h1 className={s.title}>
@@ -16,9 +16,9 @@ export const  Courses = () => {
                     Transire suum pectus mundoque potiri
                 </h2>
             </div>
-        <div>
-            <BottomNav selected="courses" />
-        </div>
+            <div>
+                <BottomNav selected="courses" />
+            </div>
         </div>
     )
 }
