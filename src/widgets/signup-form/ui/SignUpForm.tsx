@@ -2,9 +2,7 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { Routes } from "../../../shared/router/routes";
-import FormWrapper from "../../../shared/ui/form-wrapper/FormWrapper";
-import Button from "../../../shared/ui/button/Button";
-import Input from "../../../shared/ui/input/Input";
+import { Button, Input, FormWrapper } from "../../../shared";
 import s from "./SignUpForm.module.css";
 
 interface ISignUpForm {
@@ -48,5 +46,3 @@ export const SignUpForm: FC<ISignUpForm> = ({ isStudent }) => {
         </FormWrapper>
     )
 }
-
-export default SignUpForm

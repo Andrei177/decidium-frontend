@@ -1,6 +1,4 @@
-import FormWrapper from "../../../shared/ui/form-wrapper/FormWrapper";
-import Button from "../../../shared/ui/button/Button";
-import Input from "../../../shared/ui/input/Input";
+import { FormWrapper, Input, Button } from "../../../shared";
 import s from "./SignIn.module.css";
 
 export const SignIn = () => {

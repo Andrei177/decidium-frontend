@@ -1,5 +1,5 @@
 import s from "./tasks.module.css"
-import { BottomNav } from "../../../widgets/bottom-nav/ui/BottomNav"
+import { BottomNav } from "../../../widgets/bottom-nav"
 
 
 export const  Tasks = () => {

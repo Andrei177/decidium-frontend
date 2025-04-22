@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Routes } from "../../../shared/router/routes"
-import Button, { Variants } from "../../../shared/ui/button/Button"
+import { Button, Variants } from "../../../shared"
 import s from "./StartPage.module.css"
 
 

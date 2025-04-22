@@ -1,5 +1,5 @@
 import s from "./Profile.module.css"
-import { BottomNav } from "../../../widgets/bottom-nav/ui/BottomNav"
+import { BottomNav } from "../../../widgets/bottom-nav"
 
 
 export const  Profile = () => {
