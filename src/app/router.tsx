@@ -10,47 +10,53 @@ import { Courses } from "../pages/courses";
 import { Profile } from "../pages/profile";
 import { Tape } from "../pages/tape";
 import { Notes } from "../pages/notes";
+import { AuthWrapper } from "../features/auth";
 
 const router = createBrowserRouter([
     {
-        path: Routes.ROOT,
-        element: <StartPage/>
-    },
-    {
-        path: Routes.SIGNUP_STUD,
-        element: <SignUpStud/>
-    },
-    {
-        path: Routes.SIGNUP_PREPOD,
-        element: <SignUpPrepod/>
-    },
-    {
-        path: Routes.SIGNIN,
-        element: <SignIn/>
-    },
-    {
-        path: Routes.SETTING,
-        element: <Setting/>
-    },
-    {
-        path: Routes.TASKS,
-        element: <Tasks/>
-    },
-    {
-        path: Routes.NOTES,
-        element: <Notes/>
-    },
-    {
-        path: Routes.COURSES,
-        element: <Courses/>
-    },
-    {
-       path: Routes.PROFILE,
-       element: <Profile/> 
-    },
-    {
-        path: Routes.TAPE,
-        element: <Tape/>
+        element: <AuthWrapper/>,
+        children: [
+            {
+                path: Routes.ROOT,
+                element: <StartPage/>,
+            },
+            {
+                path: Routes.SIGNUP_STUD,
+                element: <SignUpStud/>
+            },
+            {
+                path: Routes.SIGNUP_PREPOD,
+                element: <SignUpPrepod/>
+            },
+            {
+                path: Routes.SIGNIN,
+                element: <SignIn/>
+            },
+            {
+                path: Routes.SETTING,
+                element: <Setting/>
+            },
+            {
+                path: Routes.TASKS,
+                element: <Tasks/>
+            },
+            {
+                path: Routes.NOTES,
+                element: <Notes/>
+            },
+            {
+                path: Routes.COURSES,
+                element: <Courses/>
+            },
+            {
+               path: Routes.PROFILE,
+               element: <Profile/> 
+            },
+            {
+                path: Routes.TAPE,
+                element: <Tape/>
+            },
+        ]
     },
     {
         path: "*",
