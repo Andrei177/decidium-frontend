@@ -5,6 +5,7 @@ import { login, useFormStore } from "../../../features/auth";
 import { MouseEvent, useState } from "react";
 import { SignInSchema } from "../model/signin.schema"
 import { z } from "zod";
+import { Loader } from "../../../shared";
 
 export const SignIn = () => {
 
@@ -46,6 +47,7 @@ export const SignIn = () => {
     return (
         <FormWrapper>
             <form className={s.dd}>
+                {isLoading && <div className={s.loader_wrap}><Loader/></div>}
                 <label className={s.vxod}>Войти</label>
                 <div className={s.form_item}>
                     <label className={s.mail} htmlFor="email">Email</label>

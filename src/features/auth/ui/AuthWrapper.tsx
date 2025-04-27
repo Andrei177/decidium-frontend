@@ -2,7 +2,8 @@ import { useEffect, useState } from "react"
 import { useAuthStore } from "../model/auth-store/auth-store"
 import { refreshTokens } from "../api/authApi";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { Routes } from "../../../shared";
+import { Loader, Routes } from "../../../shared";
+import s from "./AuthWrapper.module.css"
 
 export const AuthWrapper = () => {
 
@@ -46,8 +47,8 @@ export const AuthWrapper = () => {
         <>
             {
                 isLoading
-                    ? <h1>Загрузка...</h1>
-                    : <Outlet />
+                    ? <div className={s.loader_wrap}><Loader/></div>
+                    : <Outlet/>
             }
         </>
     )

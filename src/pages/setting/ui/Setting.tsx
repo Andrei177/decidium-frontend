@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useRef, useState } from "react"
-import { FormWrapper, Input, Button, Routes } from "../../../shared";
+import { FormWrapper, Input, Button, Routes, Loader } from "../../../shared";
 import s from "./Setting.module.css"
 import { useFormStore, signup } from "../../../features/auth";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,7 @@ export const Setting = () => {
     const inputRef = useRef<HTMLInputElement>(null);
 
     const formStore = useFormStore();
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleUploadPhoto = () => {
         if (inputRef.current) {
@@ -35,6 +36,7 @@ export const Setting = () => {
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
 
+        setIsLoading(true);
         signup(formStore.email, formStore.password, formStore.fio, formStore.role, formStore.phoneNumber, formStore.avatar)
         .then(res => {
             console.log("ответ при регистрации", res)
@@ -43,12 +45,13 @@ export const Setting = () => {
         .catch(err => {
             console.error("Ошибка при регистрации", err)
         })
-        
+        .finally(() => setIsLoading(false))
     }
 
     return (
         <FormWrapper>
             <form className={s.form} onSubmit={handleSubmit}>
+            {isLoading && <div className={s.loader_wrap}><Loader/></div>}
                 <h1 className={s.title}>Настройка профиля</h1>
                 <div className={s.photo_wrap}>
                     <label htmlFor="file">Фото профиля</label>

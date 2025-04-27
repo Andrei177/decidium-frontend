@@ -9,6 +9,7 @@
   gap: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: relative;
 }
 
 .vxod {
@@ -74,4 +75,9 @@
   bottom: -16px;
   color: red;
   font-size: 12px;
+}
+
+.loader_wrap{
+  position: absolute;
+  right: 30px;
 }
