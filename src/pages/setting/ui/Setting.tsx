@@ -1,12 +1,18 @@
-import { ChangeEvent, useRef, useState } from "react"
-import { FormWrapper, Input, Button } from "../../../shared";
+import { ChangeEvent, FormEvent, useRef, useState } from "react"
+import { FormWrapper, Input, Button, Routes } from "../../../shared";
 import s from "./Setting.module.css"
+import { useFormStore, signup } from "../../../features/auth";
+import { useNavigate } from "react-router-dom";
 
 export const Setting = () => {
+
+    const navigate = useNavigate();
 
     const [imgUrl, setImgUrl] = useState<string>("");
 
     const inputRef = useRef<HTMLInputElement>(null);
+
+    const formStore = useFormStore();
 
     const handleUploadPhoto = () => {
         if (inputRef.current) {
@@ -17,13 +23,32 @@ export const Setting = () => {
         if (e.target.files) {
             console.table(e.target.files[0]);
             console.log("Это фото будет загружено");
+
+            formStore.setFormData({
+                ...formStore,
+                avatar: e.target.files[0]
+            })
+
             setImgUrl(URL.createObjectURL(e.target.files[0]));
         }
+    }
+    const handleSubmit = (e: FormEvent) => {
+        e.preventDefault();
+
+        signup(formStore.email, formStore.password, formStore.fio, formStore.role, formStore.phoneNumber, formStore.avatar)
+        .then(res => {
+            console.log("ответ при регистрации", res)
+            navigate(Routes.PROFILE)
+        })
+        .catch(err => {
+            console.error("Ошибка при регистрации", err)
+        })
+        
     }
 
     return (
         <FormWrapper>
-            <form className={s.form}>
+            <form className={s.form} onSubmit={handleSubmit}>
                 <h1 className={s.title}>Настройка профиля</h1>
                 <div className={s.photo_wrap}>
                     <label htmlFor="file">Фото профиля</label>
@@ -42,11 +67,16 @@ export const Setting = () => {
                 </div>
                 <div className={s.inp_wrap}>
                     <label>Телефон</label>
-                    <Input type="tel" placeholder="Введите телефон..." className={s.inp} />
+                    <Input 
+                    type="tel" 
+                    placeholder="Введите телефон..." 
+                    className={s.inp} 
+                    value={formStore.phoneNumber}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => formStore.setPhoneNumber(e.target.value)}
+                    />
                 </div>
                 <Button
                     className={s.btn}
-                    onClick={e => e.preventDefault()}
                 >
                     Сохранить
                 </Button>

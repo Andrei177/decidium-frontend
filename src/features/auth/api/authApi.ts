@@ -11,15 +11,19 @@ export const login = async (email: string, password: string) => {
     })
 }
 
-export const signup = async (email: string, password: string, fio: string, role: number, phoneNumber: string, avatar: File ) => {
-    return await $publicApi.post("/auth/signup", {
-        email,
-        password,
-        first_last_middle_name: fio,
-        role,
-        phone_number: phoneNumber,
-        avatar_image: avatar
-    })
+export const signup = async (email: string, password: string, fio: string, role: number, phoneNumber: string, avatar: Blob | null) => {
+
+    const formData = new FormData();
+    formData.append("email", email)
+    formData.append("password", password)
+    formData.append("first_last_middle_name", fio)
+    formData.append("role", String(role))
+    formData.append("phone_number" , phoneNumber)
+    if(avatar){
+        formData.append("avatar_image" , avatar)
+    }
+
+    return await $publicApi.post("/auth/signup", formData)
 }
 
 export const logout = async () => {

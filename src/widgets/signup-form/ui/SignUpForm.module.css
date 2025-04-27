@@ -18,6 +18,12 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+.form_item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
 
 .mail, .pass, .fio {
   text-align: left;
@@ -78,4 +84,11 @@ input::placeholder {
 .havAcc:hover {
   background-color: #2d4373;
   color: white;
+}
+
+.form_item_err{
+  position: absolute;
+  bottom: -16px;
+  color: red;
+  font-size: 12px;
 }
