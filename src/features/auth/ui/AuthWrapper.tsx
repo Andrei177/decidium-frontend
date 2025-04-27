@@ -18,6 +18,12 @@ export const AuthWrapper = () => {
                 .then(res => {
                     console.log("Ответ при обновлении токенов", res)
                     setIsAuth(true);
+                    if (pathname == Routes.SIGNIN
+                        || pathname == Routes.SIGNUP_PREPOD
+                        || pathname == Routes.SIGNUP_STUD
+                        || pathname == Routes.ROOT) {
+                        navigate(Routes.PROFILE);
+                    }
                 })
                 .catch(err => {
                     console.error("Ошибка при обновлении токенов", err)

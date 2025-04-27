@@ -1,14 +1,26 @@
-import { $privateApi, $publicApi } from "../../../shared"
+import { $privateApi } from "../../../shared"
 
 export const refreshTokens = async () => {
-    return await $privateApi.post("/jwt/refresh");
+    const response = await $privateApi.post("/jwt/refresh");
+
+    if(response.headers.authorization){
+        localStorage.setItem("accessToken", response.headers.authorization.split(" ")[1])
+    }
+
+    return response
 }
 
 export const login = async (email: string, password: string) => {
-    return await $publicApi.post("/auth/login", {
+    const response =  await $privateApi.post("/auth/login", {
         email,
         password
     })
+
+    if(response.headers.authorization){
+        localStorage.setItem("accessToken", response.headers.authorization.split(" ")[1])
+    }
+
+    return response
 }
 
 export const signup = async (email: string, password: string, fio: string, role: number, phoneNumber: string, avatar: Blob | null) => {
@@ -23,7 +35,13 @@ export const signup = async (email: string, password: string, fio: string, role:
         formData.append("avatar_image" , avatar)
     }
 
-    return await $publicApi.post("/auth/signup", formData)
+    const response = await $privateApi.post("/auth/signup", formData)
+
+    if(response.headers.authorization){
+        localStorage.setItem("accessToken", response.headers.authorization.split(" ")[1])
+    }
+
+    return response
 }
 
 export const logout = async () => {
