@@ -20,14 +20,14 @@ export const AuthWrapper = () => {
                 console.log("Ответ при обновлении токенов", res)
                 setIsAuth(true);
                 if (isPublicPage(pathname)) {
-                    navigate(Routes.PROFILE);
+                    navigate(Routes.PROFILE, { replace: true });
                 }
             })
             .catch(err => {
                 console.error("Ошибка при обновлении токенов", err)
                 setIsAuth(false);
                 if (!isPublicPage(pathname)) {
-                    navigate(Routes.SIGNIN);
+                    navigate(Routes.SIGNIN, { replace: true });
                 }
             })
             .finally(() => {
