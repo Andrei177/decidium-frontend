@@ -10,7 +10,7 @@ export const CoursesListItem: FC<ICoursesListItem> = ({img, title}) => {
   return (
     <div className={s.aye}>
         <img className = {s.imga} src={img} />
-        <p>{title}</p>
+        <div className={s.text}>{title}</div>
     </div>
   )
 }
