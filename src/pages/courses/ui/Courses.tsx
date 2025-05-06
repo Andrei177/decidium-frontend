@@ -1,21 +1,13 @@
-import s from "./Courses.module.css"
+import { CoursesListItem } from "../../../entities/course"
 import { BottomNav } from "../../../widgets/bottom-nav"
+import s from "./Courses.module.css"
 
 
 export const Courses = () => {
     return (
         <div className={s.content}>
-            <div className={s.titles}>
-                <h1 color='#FF00FF'>
-                    Курсы
-                </h1>
-                <h1 className={s.title}>
-                    Decidium
-                </h1>
-                <h2 className={s.subtitle}>
-                    Transire suum pectus mundoque potiri
-                </h2>
-            </div>
+            
+            <CoursesListItem img="/lex.jpg" title="title courses"/>
             <div>
                 <BottomNav selected="courses" />
             </div>

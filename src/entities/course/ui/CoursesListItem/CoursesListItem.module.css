@@ -1,0 +1,14 @@
+
+.aye {
+background-color: white;
+border: 1px;
+border-radius: 20px;      
+padding: 1px px; 
+overflow: hidden;  
+text-align: center
+}
+
+.imga {
+    width: 250px;
+    height: 200px;
+}

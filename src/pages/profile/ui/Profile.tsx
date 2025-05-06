@@ -1,11 +1,11 @@
-import s from "./Profile.module.css"
-import { BottomNav } from "../../../widgets/bottom-nav"
-import exit from "/exit.svg"
 import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { getProfileInfo, useUserStore } from "../../../entities/user"
 import { logout } from "../../../features/auth"
-import { useNavigate } from "react-router-dom"
 import { Routes } from "../../../shared"
+import { BottomNav } from "../../../widgets/bottom-nav"
+import s from "./Profile.module.css"
+import exit from "/exit.svg"
 
 export const Profile = () => {
 
