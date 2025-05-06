@@ -31,7 +31,7 @@ export const AuthWrapper = () => {
                 }
             })
             .finally(() => {
-                setIsLoading(false)
+                setTimeout(() => setIsLoading(false), 0)
             })
     }, [])
 
