@@ -2,7 +2,7 @@ import s from "./Notes.module.css";
 import { BottomNav } from "../../../widgets/bottom-nav";
 import pencil from "/note_create.svg";
 import { CreateNote } from "../../../widgets/create_note";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Notes = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,7 +23,7 @@ export const Notes = () => {
           <img src={pencil} alt="Создать" className={s.editIcon} />
         </button>
       </div>
-      <CreateNote isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <CreateNote isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
       <div>
         <BottomNav selected="notes" />
       </div>
