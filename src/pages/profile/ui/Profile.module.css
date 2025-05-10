@@ -1,6 +1,8 @@
 .content {
   background-color: rgb(179, 198, 231); /* голубой фон всей страницы */
   height: 100vh;
+  padding-top: 60px;    
+  padding-bottom: 60px; 
   display: flex;
   flex-direction: column;
 }
