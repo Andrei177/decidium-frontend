@@ -1,10 +1,13 @@
 import s from "./Tape.module.css"
 import { BottomNav } from "../../../widgets/bottom-nav"
-
+import { TopNav } from "../../../widgets/top_nav/ui/TopNav"
 
 export const  Tape = () => {
     return (
         <div className={s.content}>
+            <div>
+                <TopNav />
+            </div>
             <div className={s.titles}>
             <h1 color='#FF00FF'>
                     Лента

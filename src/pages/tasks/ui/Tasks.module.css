@@ -1,13 +1,14 @@
 .content{
     background-color: rgb(179, 198, 231);
     height: 100vh;
+    padding-top: 60px;    
+    padding-bottom: 60px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 .titles{
-    padding-top: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
