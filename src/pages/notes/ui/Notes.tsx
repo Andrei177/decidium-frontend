@@ -3,12 +3,16 @@ import { BottomNav } from "../../../widgets/bottom-nav";
 import pencil from "/note_create.svg";
 import { CreateNote } from "../../../widgets/create_note";
 import { useState } from "react";
+import { TopNav } from "../../../widgets/top_nav/ui/TopNav"
 
 export const Notes = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className={s.content}>
+      <div>
+          <TopNav />
+      </div>
       <div className={s.titles}>
         <h1 className={s.title}>Пока нет заметок...</h1>
         <h2 className={s.subtitle}>

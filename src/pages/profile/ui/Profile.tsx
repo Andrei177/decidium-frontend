@@ -6,6 +6,7 @@ import { getProfileInfo, useUserStore } from "../../../entities/user"
 import { logout } from "../../../features/auth"
 import { useNavigate } from "react-router-dom"
 import { Routes } from "../../../shared"
+import { TopNav } from "../../../widgets/top_nav/ui/TopNav"
 
 export const Profile = () => {
 
@@ -35,6 +36,9 @@ export const Profile = () => {
   }, [])
   return (
     <div className={s.content}>
+      <div>
+          <TopNav />
+      </div>
       <div className={s.profileCard}>
         <img src={avatar_image} alt="Profile" className={s.avatar} />
         <div className={s.name}>{first_last_middle_name}</div>

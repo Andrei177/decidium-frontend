@@ -1,10 +1,14 @@
 import s from "./tasks.module.css"
 import { BottomNav } from "../../../widgets/bottom-nav"
+import { TopNav } from "../../../widgets/top_nav/ui/TopNav"
 
 
 export const  Tasks = () => {
     return (
         <div className={s.content}>
+            <div>
+                <TopNav />
+            </div>
             <div className={s.titles}>
             <h1 color='#FF00FF'>
                     Задания
