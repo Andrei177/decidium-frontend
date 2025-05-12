@@ -1,57 +1,72 @@
 .content {
-    background-color: rgb(179, 198, 231);
-    height: 100vh;
-    padding-top: 60px;    
-    padding-bottom: 60px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .titles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 17px;
-    margin-bottom: 25px;
-  }
-  
-  .title {
-    font-size: 24px;
-    color: white;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    color: white;
-  }
-  
-  .editButtonContainer {
-    position: absolute;
-    bottom: clamp(70px, 10%, 100px); 
-    right: clamp(0px, 5%, 250px); 
-  }
-  
-  .editButton {
-    background-color: #6c8be7; 
-    border: none;
-    border-radius: 50%; 
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .editIcon {
-    width: 50px;
-    height: 50px;
-  }
+  background-color: rgb(179, 198, 231);
+  height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 24px;
+  color: white;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: white;
+}
+
+.editButtonContainer {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.editButton {
+  background-color: #6c8be7;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.editIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.notes {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
