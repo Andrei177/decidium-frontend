@@ -80,7 +80,7 @@ export const TopNav = () => {
         />
       </div>
 
-      <Link to="/courses" className={styles.logoContainer}>
+      <Link to="/courses" className={styles.logo_container}>
         <img src={logo} alt="Logo" className={styles.logo} />
       </Link>
 

@@ -1,13 +1,9 @@
 import s from "./Courses.module.css"
-import { BottomNav } from "../../../widgets/bottom-nav"
-import { TopNav } from "../../../widgets/top_nav/ui/TopNav"
+import { AppLayout } from "../../../widgets/app-layout"
 
 export const Courses = () => {
     return (
-        <div className={s.content}>
-            <div>
-                <TopNav />
-            </div>
+        <AppLayout currentPage="courses">
             <div className={s.titles}>
                 <h1 color='#FF00FF'>
                     Курсы
@@ -19,9 +15,6 @@ export const Courses = () => {
                     Transire suum pectus mundoque potiri
                 </h2>
             </div>
-            <div>
-                <BottomNav selected="courses" />
-            </div>
-        </div>
+        </AppLayout>
     )
 }

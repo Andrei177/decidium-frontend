@@ -1,16 +1,12 @@
 import s from "./tasks.module.css"
-import { BottomNav } from "../../../widgets/bottom-nav"
-import { TopNav } from "../../../widgets/top_nav/ui/TopNav"
+import { AppLayout } from "../../../widgets/app-layout"
 
 
-export const  Tasks = () => {
+export const Tasks = () => {
     return (
-        <div className={s.content}>
-            <div>
-                <TopNav />
-            </div>
+        <AppLayout currentPage="tasks">
             <div className={s.titles}>
-            <h1 color='#FF00FF'>
+                <h1 color='#FF00FF'>
                     Задания
                 </h1>
                 <h1 className={s.title}>
@@ -20,9 +16,6 @@ export const  Tasks = () => {
                     Transire suum pectus mundoque potiri
                 </h2>
             </div>
-        <div>
-            <BottomNav selected="tasks" />
-        </div>
-        </div>
+        </AppLayout>
     )
 }
