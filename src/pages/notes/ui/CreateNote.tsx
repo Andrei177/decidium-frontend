@@ -11,7 +11,7 @@ interface ICreateNote {
 export const CreateNote = ({ isOpen, setIsOpen }: ICreateNote) => {
 
   const { notes, setNotes } = useNotesStore();
-  const [note, setNote] = useState<NoteType>({note_id: 0, title: "", text: ""});
+  const [note, setNote] = useState<NoteType>({title: "", text: ""});
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCreateNote = () => {
@@ -19,8 +19,8 @@ export const CreateNote = ({ isOpen, setIsOpen }: ICreateNote) => {
     createNote(note.title, note.text)
     .then(res => {
       console.log("Ответ при создании заметки", res)
-      setNotes([...notes, res.data])
-      setNote({note_id: 0, title: "", text: ""});
+      setNotes([...notes, { ...note }])
+      setNote({title: "", text: ""});
     })
     .catch(err => {
       console.error("Ошибка при создании заметки", err)

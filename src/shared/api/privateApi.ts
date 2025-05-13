@@ -1,5 +1,6 @@
 import axios, { AxiosError } from "axios";
 import { API_URL } from "../config/backend";
+import { Routes } from "../router/routes";
 
 export const $privateApi = axios.create({
   baseURL: API_URL,
@@ -39,7 +40,7 @@ $privateApi.interceptors.response.use(
         return $privateApi(originalRequest);
       } catch (refreshError) {
         localStorage.removeItem("accessToken");
-
+        window.location.pathname = Routes.SIGNIN;
         return Promise.reject(refreshError);
       }
     }

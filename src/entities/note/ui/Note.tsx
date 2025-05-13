@@ -1,7 +1,7 @@
 import { NoteType } from "../model/types"
 import s from "./Note.module.css"
 
-export const Note = ({ title, text } : Omit<NoteType, "note_id">) => {
+export const Note = ({ title, text } : Omit<NoteType, "id">) => {
   return (
     <div className={s.note}>
         <div className={s.title}>{title}</div>

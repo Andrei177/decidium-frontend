@@ -26,7 +26,7 @@ export const Notes = () => {
         notes.length > 0
           ? <div className={s.notes}>
             {
-              notes.map(note => <Note title={note.title} text={note.text} key={note.note_id} />)
+              notes.map(note => <Note title={note.title} text={note.text} key={note.id} />)
             }
           </div>
           : <div className={s.titles}>

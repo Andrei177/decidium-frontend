@@ -2,7 +2,7 @@ import { $privateApi } from "../../../shared"
 import { NoteType } from "../model/types"
 
 export const createNote = async (title: string, text: string) => {
-    const response = await $privateApi.post<NoteType>("/notes/", {
+    const response = await $privateApi.post("/notes/", {
         title,
         text
     })
@@ -23,7 +23,7 @@ export const getOneNote = async (noteId: number) => {
 }
 
 export const updateOneNote = async (updatedNote: NoteType) => {
-    const response = await $privateApi.patch<NoteType>(`/notes/${updatedNote.note_id}`, {
+    const response = await $privateApi.patch<NoteType>(`/notes/${updatedNote.id}`, {
         title: updatedNote.title,
         text: updatedNote.text
     });
