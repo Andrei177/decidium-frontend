@@ -36,7 +36,7 @@ export const Profile = () => {
   return (
     <AppLayout currentPage="profile">
       <div className={s.profileCard}>
-        <img src={avatar_image} alt="Profile" className={s.avatar} />
+        {avatar_image && <img src={avatar_image} alt="Profile" className={s.avatar} />}
         <div className={s.name}>{first_last_middle_name}</div>
         <div className={s.infoBlock}>
           <span className={s.label}>Email</span>
