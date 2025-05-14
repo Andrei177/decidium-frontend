@@ -11,6 +11,7 @@ import { Profile } from "../pages/profile";
 import { Tape } from "../pages/tape";
 import { Notes } from "../pages/notes";
 import { AuthWrapper } from "../features/auth";
+import { Students } from "../pages/students";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
                 path: Routes.TAPE,
                 element: <Tape/>
             },
+            {
+                path: Routes.STUDENTS,
+                element: <Students/>
+            }
         ]
     },
     {
