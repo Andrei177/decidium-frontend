@@ -20,7 +20,7 @@ export const AuthWrapper = () => {
                 console.log("Ответ при обновлении токенов", res)
                 setIsAuth(true);
                 if (isPublicPage(pathname)) {
-                    navigate(Routes.PROFILE, { replace: true });
+                    navigate(Routes.COURSES, { replace: true });
                 }
             })
             .catch(err => {

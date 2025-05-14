@@ -1,0 +1,35 @@
+.photo_wrap,
+.inp_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.photo {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+}
+.photo_file_face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(75, 158, 252);
+  font-size: 17px;
+}
+.photo_file {
+  display: none;
+}
+.uploaded_img_wrap {
+  text-align: center;
+  height: 100%;
+  width: auto;
+}
+.uploaded_img {
+  height: 100%;
+  width: auto;
+}

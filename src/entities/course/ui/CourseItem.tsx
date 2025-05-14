@@ -8,7 +8,11 @@ interface ICourseItem {
 export const CourseItem = ({ title, img }: ICourseItem) => {
   return (
     <div className={s.course}>
-      <img src={img}/>
+      {
+        img
+          ? <img src={img} />
+          : <div className={s.replacement}></div>
+      }
       <div className={s.title}>{title}</div>
     </div>
   )

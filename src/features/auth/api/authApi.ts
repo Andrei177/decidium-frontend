@@ -47,7 +47,7 @@ export const signup = async (email: string, password: string, fio: string, role:
 export const logout = async () => {
     const response = await $privateApi.delete("/auth/logout");
 
-    if(response.status == 200) localStorage.removeItem("accessToken");
+    localStorage.removeItem("accessToken");
 
     return response;
 }
