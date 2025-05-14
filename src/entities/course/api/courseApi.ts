@@ -1,7 +1,9 @@
 import { $privateApi } from "../../../shared"
 import { CourseType } from "../model/types"
 
-export const createCourse = async (title: string, description: string, course_image: Blob) => {
+export const createCourse = async (title: string, description: string, course_image: Blob | null) => {
+
+    if(!course_image) return Promise.reject({message: "Не передана картинка курса"});
 
     const formData = new FormData();
 

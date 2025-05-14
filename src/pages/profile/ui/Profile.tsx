@@ -8,14 +8,15 @@ import { AppLayout } from "../../../widgets/app-layout"
 
 export const Profile = () => {
 
-  const { avatar_image, first_last_middle_name, email, phone_number, created_at } = useUserStore();
+  const { avatar_image, first_last_middle_name, email, phone_number, created_at, setEmpty } = useUserStore();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout()
       .then(res => {
         console.log("Ответ при выходе из аакаунта", res)
-        navigate(Routes.ROOT)
+        navigate(Routes.ROOT),
+        setEmpty();
       })
       .catch(err => {
         console.error("Ошибка при выходе из аккаунта", err)
@@ -37,7 +38,7 @@ export const Profile = () => {
         </div>
         <div className={s.infoBlock}>
           <span className={s.label}>Пользуюсь Decidium с</span>
-          <span className={s.value}>{created_at && new Date(created_at).toISOString()}</span>
+          <span className={s.value}>{created_at && new Date(created_at).toLocaleString()}</span>
         </div>
         <button onClick={handleLogout} className={s.logoutBtn}>
           <div className={s.logoutBtnContent}>
